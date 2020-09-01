@@ -1,8 +1,31 @@
 <?php // Theme Functions
 
 // Required Files
+require_once get_template_directory() . '/_inc/classes/class-tgm-plugin-activation.php';
 // require get_template_directory() . '/_inc/classes/class-o-customize.php';
 // require get_template_directory() . '/_inc/helpers/custom-css.php';
+
+
+// Register Required Themes
+add_action( 'tgmpa_register', function () {
+	tgmpa([
+		[
+			'name'      => 'Elementor Page Builder',
+			'slug'      => 'elementor',
+			'required'  => true
+		]
+	],[
+		'id'           => 'o',
+		'default_path' => '',
+		'menu'         => 'tgmpa-install-plugins',
+		'parent_slug'  => 'themes.php',
+		'capability'   => 'edit_theme_options',
+		'has_notices'  => true,
+		'dismissable'  => false,
+		'is_automatic' => false,
+		'message'      => ''
+	]);
+});
 
 
 // Theme Support
