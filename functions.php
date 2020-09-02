@@ -2,6 +2,8 @@
 
 // Required Files
 require_once get_template_directory() . '/_inc/classes/class-tgm-plugin-activation.php';
+require_once get_template_directory() . '/_inc/partials/header_markup.php';
+require_once get_template_directory() . '/_inc/partials/footer_markup.php';
 // require get_template_directory() . '/_inc/classes/class-o-customize.php';
 // require get_template_directory() . '/_inc/helpers/custom-css.php';
 
