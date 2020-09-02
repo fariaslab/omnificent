@@ -6,12 +6,17 @@ require_once get_template_directory() . '/_inc/classes/class-tgm-plugin-activati
 // require get_template_directory() . '/_inc/helpers/custom-css.php';
 
 
-// Register Required Themes
+// Register Required Plugins
 add_action( 'tgmpa_register', function () {
 	tgmpa([
 		[
 			'name'      => 'Elementor Page Builder',
 			'slug'      => 'elementor',
+			'required'  => true
+		],
+		[
+			'name'      => 'Elementor – Header, Footer & Blocks Template',
+			'slug'      => 'header-footer-elementor',
 			'required'  => true
 		]
 	],[
@@ -35,6 +40,7 @@ add_action( 'after_setup_theme', function() {
 	add_theme_support( 'align-wide' );
 	add_theme_support( 'responsive-embeds' );
 	add_theme_support( 'customize-selective-refresh-widgets' );
+	add_theme_support( 'header-footer-elementor' );
 
 	add_theme_support( 'post-thumbnails' );
 	// set_post_thumbnail_size( 1200, 9999 );
