@@ -15,8 +15,8 @@
         <div class="site-wrap">
             <? if ( function_exists( 'hfe_header_enabled' ) && hfe_header_enabled() ) {
                 hfe_render_header();
-            } else { ?>
-                <header class="site-header">
-                    Default theme header will go here
-                </header>
-            <?php } ?>
+            } else {
+                if ( !function_exists( 'o_header_markup' ) )
+                    require_once get_template_directory() . '/_inc/partials/header_markup.php';
+                o_header_markup();
+            } ?>
