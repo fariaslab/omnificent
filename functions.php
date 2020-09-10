@@ -8,6 +8,12 @@ require_once get_template_directory() . '/_inc/partials/footer_markup.php';
 // require get_template_directory() . '/_inc/helpers/custom-css.php';
 
 
+// Hooks
+function o_custom_css() {
+	do_action('o_custom_css');
+}
+
+
 // Register Required Plugins
 add_action( 'tgmpa_register', function () {
 	tgmpa([

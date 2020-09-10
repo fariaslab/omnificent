@@ -8,6 +8,10 @@
         <meta name="author" content="Farias Maiquita">
 
         <?php wp_head(); ?>
+
+        <style>
+            <?php o_custom_css(); ?>
+        </style>
     </head>
     <body <?php body_class(); ?>>
         <?php wp_body_open(); ?>
